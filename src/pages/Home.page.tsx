@@ -1,11 +1,11 @@
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import { Welcome } from '../components/Welcome/Welcome';
+import { Welcome } from '@/components/text/Welcome/Welcome';
+import {NewGameButton} from "@/components/buttons/NewGameButton";
 
 export function HomePage() {
   return (
     <>
       <Welcome />
-      <ColorSchemeToggle />
+      <NewGameButton />
     </>
   );
 }
