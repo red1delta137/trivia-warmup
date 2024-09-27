@@ -6,10 +6,20 @@ export function NewGameButton() {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        fetch('http://localhost:8080/category/all')
-            .then(res => res.text())
-            .then(data => console.log(data))
-            .catch(err => console.log(err));
+        let data: NewGame = {
+            categories: ["Animals"],
+            difficulty: "Easy",
+            multipleChoice: true,
+            trueFalse: false
+        }
+        console.log(JSON.stringify(data, null, 2));
+        fetch('http://localhost:8080/game/new-game', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
     };
 
     return (

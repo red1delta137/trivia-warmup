@@ -1,4 +1,6 @@
 interface NewGame {
-    categories: string[];
-    userName: string;
+    categories?: string[];
+    difficulty: string;
+    multipleChoice: boolean;
+    trueFalse: boolean;
 }
