@@ -12,7 +12,6 @@ export function NewGameButton() {
             multipleChoice: true,
             trueFalse: false
         }
-        console.log(JSON.stringify(data, null, 2));
         fetch('http://localhost:8080/game/new-game', {
             method: 'POST',
             headers: {
