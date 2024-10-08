@@ -1,12 +1,11 @@
-import {MultiSelect} from "@mantine/core";
+import {MultiSelect, Select} from "@mantine/core";
 
 export function DifficultySelector() {
 
     return (
-        <MultiSelect
+        <Select
             placeholder="Difficulty"
             data={["Easy", "Medium", "Hard"]}
-            maxValues={10}
             clearable
         />
     );

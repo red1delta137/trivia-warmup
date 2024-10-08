@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {TriviaPage} from "@/pages/TriviaPage";
+import {QuestionPage} from "@/pages/QuestionPage";
+import {MantineProvider} from "@mantine/core";
 
 const router = createBrowserRouter([
     {
@@ -9,9 +10,9 @@ const router = createBrowserRouter([
         element: <App />
     },
     {
-        path: "/trivia-page",
-        element: <TriviaPage/>
+        path: '/question',
+        element: <QuestionPage/>
     }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(<RouterProvider router={router}/>);
+ReactDOM.createRoot(document.getElementById('root')!).render(<MantineProvider><RouterProvider router={router}/></MantineProvider>);
